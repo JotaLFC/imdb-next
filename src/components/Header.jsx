@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import MenuItem from './MenuItem'
-import {AiFillHome} from 'react-icons/ai'
-import {BsFillInfoCircleFill} from 'react-icons/bs'
+import { AiFillHome } from 'react-icons/ai'
+import { BsFillInfoCircleFill } from 'react-icons/bs'
 import DarkModeSwitch from './DarkModeSwitch'
 
 export default function Header() {

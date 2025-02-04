@@ -2,7 +2,7 @@
 
 import { MdLightMode, MdDarkMode } from 'react-icons/md'
 import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function DarkmodeSwitch() {
     const { theme, setTheme, systemTheme } = useTheme()
