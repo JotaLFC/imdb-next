@@ -3,11 +3,11 @@ import Image from 'next/image'
 export default async function MoviePage({ params }) {
     const movieId = (await params).id
     const res = await fetch (`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`)
-    const movie = await res.json()        
+    const movie = await res.json()             
     
     const imageUrl = movie.backdrop_path || movie.poster_path
     ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path}`
-    : `https://image.tmdb.org/t/p/w300_and_h450_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg`; 
+    : `https://image.tmdb.org/t/p/w300_and_h450_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg` 
 
   return (
     <div className="w-full">
