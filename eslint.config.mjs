@@ -9,6 +9,19 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+export default [
+  ...compat.config({
+    extends: ["next/core-web-vitals"],
+    parserOptions: {
+      ecmaVersion: 2020,
+      sourceType: "module",
+    },
+    env: {
+      browser: true,
+      es2021: true,
+    },
+    rules: {
+      // Add your custom rules here
+    },
+  }),
+];
